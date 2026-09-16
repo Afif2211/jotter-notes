@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.notes-app {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: hidden;
+  background: #1c1f1b;
+  font-family: 'Inter', sans-serif;
+  color: #f3ede0;
+}
+
+.notes-scene-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.notes-brand {
+  position: relative;
+  z-index: 1;
+  font-size: 13px;
+  color: rgba(243, 237, 224, 0.5);
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.notes-brand strong {
+  color: #9cb89a;
+  font-weight: 600;
+}
+
+.notes-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  background: rgba(243, 237, 224, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(243, 237, 224, 0.1);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.notes-app-name {
+  font-family: 'Courier Prime', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9cb89a;
+  margin: 0 0 6px;
+}
+
+.notes-card h1 {
+  font-family: 'Courier Prime', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+
+.notes-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.notes-form input {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(243, 237, 224, 0.15);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #f3ede0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.notes-form input::placeholder {
+  color: rgba(243, 237, 224, 0.4);
+}
+
+.notes-form input:focus {
+  border-color: #9cb89a;
+}
+
+.notes-form button {
+  background: #9cb89a;
+  color: #1c1f1b;
+  border: none;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.notes-form button:hover {
+  background: #b2cbb0;
+}
+
+.notes-form input:focus-visible,
+.notes-form button:focus-visible {
+  outline: 2px solid #9cb89a;
+  outline-offset: 2px;
+}
+
+.notes-empty {
+  color: rgba(243, 237, 224, 0.45);
+  font-size: 14px;
+  text-align: center;
+  padding: 16px 0;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.notes-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  background: rgba(243, 237, 224, 0.06);
+  border: 1px solid rgba(243, 237, 224, 0.08);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.notes-item p {
+  margin: 0;
+  font-family: 'Courier Prime', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.notes-item button {
+  background: none;
+  border: none;
+  color: rgba(243, 237, 224, 0.4);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+
+.notes-item button:hover {
+  color: #d98b7a;
+}
+
+.notes-about {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  padding: 20px 4px 0;
+}
+
+.notes-about p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(243, 237, 224, 0.5);
+  margin: 0;
+  text-align: center;
+}
+
+.notes-about code {
+  font-family: 'Courier Prime', monospace;
+  background: rgba(156, 184, 154, 0.12);
+  color: #9cb89a;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.notes-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 20px 16px 0;
+}
+
+.notes-tech-badge {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(243, 237, 224, 0.55);
+  background: rgba(243, 237, 224, 0.05);
+  border: 1px solid rgba(243, 237, 224, 0.1);
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+@media (max-width: 480px) {
+  .notes-card {
+    padding: 24px 20px;
+  }
+}
