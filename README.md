@@ -3,7 +3,7 @@
 A simple notes app that persists across page reloads using the browser's localStorage API, with a Three.js background of drifting translucent pages.
 
 ## Live Demo
-[Add your Vercel link here once deployed]
+https://jotter-notes-alpha.vercel.app/
 
 ## Features
 - Add and delete notes
